@@ -48,6 +48,7 @@
 }
 
 
+
 .btn {
   border: 1px solid white;
   border-radius: 25px;
@@ -177,12 +178,16 @@ main {
   height: 80px;
   width: 100%;
   padding: 0 20px;
+  color: grey;
 }
 
 #nav_action_sx .customer_name .app{
   border-bottom: 2px solid grey;
-  color: grey;
   padding-bottom: 10px;
+}
+
+#nav_action_sx .customer_name .app a {
+  color: grey;
 }
 
 #nav_action_sx .customer_name .utente {
@@ -211,7 +216,7 @@ main {
 #central_section .col_to_action {
   width: calc(100% - 250px);
   height: 90px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
   right: 0;
@@ -232,4 +237,38 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
+}
+
+footer .box_footer{
+  height: 100%;
+  display: flex;
+}
+
+.sinister {
+  height: 100%;
+  width: calc(100% / 4);
+  position: relative;
+}
+
+.sinister img {
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+}
+
+
+
+.player {
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  background-color: blue;
+}
+
+.volume {
+  height: 100%;
+  width: calc(100% / 5);
+  background-color: yellow;
 }
