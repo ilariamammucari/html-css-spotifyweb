@@ -58,19 +58,21 @@
 /* main */
 main {
   height: calc(100% - 90px);
+  background-color: #141922;
 }
 
 #nav_action_sx {
   height: 100%;
+  min-height: 500px;
   width: 250px;
   background-color: black;
-  display: flex;
-  flex-direction: column;
 }
 
 #nav_action_sx .box-1 {
-  height: calc(100% - 80px);
-  overflow: hidden;
+  height: calc(100% -  80px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
 }
 
 
@@ -81,7 +83,7 @@ main {
 #nav_action_sx .logo img {
   width: 60%;
   padding: 20px 0;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 #nav_action_sx .search_playlists {
@@ -118,18 +120,24 @@ main {
   color: white;
 }
 
-#nav_action_sx .search_playlists h3 {
+
+#nav_action_sx .playlists_name {
+  width: 100%;
+  overflow: hidden;
+}
+
+#nav_action_sx .playlists_name h3 {
   color: white;
   padding-left: 20px;
   font-size: 18px;
 }
 
-#nav_action_sx .search_playlists p {
+#nav_action_sx .playlists_name p {
   margin: 20px 0 30px;
   padding-left: 20px;
 }
 
-#nav_action_sx .search_playlists p a span {
+#nav_action_sx .playlists_name p a span {
   background-color: #999999;
   padding: 5px 10px;
   margin-right: 5px;
@@ -137,25 +145,22 @@ main {
   font-size: 20px;
 }
 
-#nav_action_sx .search_playlists p a {
+#nav_action_sx .playlists_name p a {
   color: grey;
 }
 
-#nav_action_sx .search_playlists p:hover a {
+#nav_action_sx .playlists_name p:hover a {
   color: white;
 }
 
 
-#nav_action_sx .playlists_name {
-  /* width: 100%; */
-  margin-left: 20px;
-  overflow: hidden;
-}
 
 #nav_action_sx .playlists_name ul {
+  padding-left: 20px;
   height: 80%;
   overflow-y: auto;
 }
+
 
 #nav_action_sx .playlists_name a {
   color: grey;
@@ -171,21 +176,42 @@ main {
 #nav_action_sx .customer_name {
   height: 80px;
   width: 100%;
-  background-color: lightgrey;
+  padding: 0 20px;
 }
+
+#nav_action_sx .customer_name .app{
+  border-bottom: 2px solid grey;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+#nav_action_sx .customer_name .utente {
+  margin-top: 10px;
+  color: grey;
+  font-weight: bold;
+}
+
+#nav_action_sx .customer_name .utente img {
+  width: 15%;
+  border-radius: 50%;
+  background-color: grey;
+  padding: 5px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 
 #central_section {
   height: 100%;
   width: calc(100% - 250px);
   margin-top: 90px;
-  background-color: #141922;
   overflow-y: auto;
 }
 
 #central_section .col_to_action {
   width: calc(100% - 250px);
   height: 90px;
-  background-color: #0c0f14;
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   right: 0;
