@@ -8,6 +8,7 @@
   width: 100%;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 /* classi riutilizzabili */
@@ -37,6 +38,11 @@
   text-decoration: none;
 }
 
+.c_white {
+  color: white;
+  font-size: 50px;
+}
+
 .list_unstyled {
   list-style: none;
 }
@@ -60,6 +66,12 @@ main {
   background-color: black;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+
+#nav_action_sx .box-1 {
+  height: calc(100% - 80px);
+  min-height: 600px;
 }
 
 
@@ -107,33 +119,59 @@ main {
   color: white;
 }
 
-#nav_action_sx .search_playlists h3,
-#nav_action_sx .search_playlists p {
+#nav_action_sx .search_playlists h3 {
   color: white;
   padding-left: 20px;
   font-size: 18px;
 }
 
 #nav_action_sx .search_playlists p {
-  margin: 20px 0;
+  margin: 20px 0 30px;
+  padding-left: 20px;
 }
 
-#nav_action_sx .search_playlists p span {
+#nav_action_sx .search_playlists p a span {
   background-color: #999999;
   padding: 5px 10px;
   margin-right: 5px;
   color: black;
+  font-size: 20px;
 }
+
+#nav_action_sx .search_playlists p a {
+  color: grey;
+}
+
+#nav_action_sx .search_playlists p:hover a {
+  color: white;
+}
+
 
 #nav_action_sx .playlists_name {
-  height: 200px;
   width: 100%;
-  background-color: lightblue;
-  flex-grow: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin-left: 20px;
+  overflow-y: scroll;
 }
 
+#nav_action_sx .playlists_name ul {
+  height: 40%;
+}
+
+#nav_action_sx .playlists_name a {
+  color: grey;
+  line-height: 2;
+  font-size: 15px;
+}
+
+#nav_action_sx .playlists_name a:hover {
+  color: white;
+}
+
+
 #nav_action_sx .customer_name {
-  height: 100px;
+  height: 80px;
   width: 100%;
   background-color: lightgrey;
 }
@@ -141,7 +179,9 @@ main {
 #central_section {
   height: 100%;
   width: calc(100% - 250px);
+  margin-top: 90px;
   background-color: #141922;
+  overflow-y: auto;
 }
 
 #central_section .col_to_action {
