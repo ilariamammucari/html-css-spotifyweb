@@ -470,29 +470,20 @@ footer {
 
 footer .box_footer {
   display: flex;
+  width: 100%;
   height: 100%;
 }
 
 .sinister {
   width: 250px;
-  height: 100%;
-  padding: 0 10px;
+  padding: 0 0 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-
-.copertina  {
-  width: 30%;
-}
-
 .copertina img {
-  width: 100%;
-}
-
-.titolo {
-  width: 60%;
+  width: 60px;
 }
 
 .titolo a {
@@ -505,13 +496,83 @@ footer .box_footer {
   text-decoration: underline;
 }
 
-.player {
-  width: 100%;
-  flex-grow: 1;
-  background-color: blue;
+
+.iconcine {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
+
+@media screen and (max-width: 992px) {
+  .iconcine {
+    flex-direction: column;
+    justify-content: center;
+  }
+} 
+
+.player {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.player .player_top ul li {
+  padding: 10px 20px;
+}
+
+.player .player_top ul li:hover i {
+  transform: scale(1.2);
+}
+
+.player .player_bottom ul {
+  display: flex;
+  align-items: center;
+}
+
+.player .player_bottom ul li {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+
+.player .player_bottom ul li .musica_bar {
+  width: 600px;
+  height: 4px;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+.player .player_bottom ul li .musica_bar .color_musicabar {
+  width: 200px;
+  height: 4px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.player .player_bottom ul li .musica_bar:hover .color_musicabar::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white; 
+  position: absolute;
+  left: 100%;
+  top: -200%;
+}
+
+.player .player_bottom ul li .musica_bar:hover .color_musicabar {
+  background-color: chartreuse;
+}
+
+
+
 .volume {
-  width: calc(100% / 5);
+  width: 300px;
   background-color: yellow;
 }
