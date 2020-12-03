@@ -358,7 +358,9 @@ main {
 }
 
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 668px) {
   #nav_action_sx {
     width: 70px;
   }
@@ -457,6 +459,18 @@ main {
   text-align: center;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 668px) {
+  #central_section .contenuto_centrale .lista_recenti ul li {
+    width: calc(100% / 2 - 15px);
+  }
+
+  #central_section .contenuto_centrale .creato_perme ul li,
+  #central_section .contenuto_centrale .creato_perme ul li,
+  #central_section .contenuto_centrale .artisti_popolari ul li {
+    width: calc(100% / 2);
+  }
+}
 /* footer */
 footer {
   width: 100%;
@@ -497,11 +511,16 @@ footer .box_footer {
 }
 
 
-.iconcine {
+.sinister .iconcine {
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
+
+.sinister .iconcine a {
+  padding-left: 10px;
+}
+
+
 
 
 @media screen and (max-width: 992px) {
@@ -516,14 +535,20 @@ footer .box_footer {
   flex-grow: 1;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 10px;
 }
 
-.player .player_top ul li {
-  padding: 10px 20px;
+.player .player_top .box_playertop {
+  display: flex;
 }
 
-.player .player_top ul li:hover i {
+.player .player_top .box_playertop div {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.player .player_top .box_playertop div:hover i {
   transform: scale(1.2);
 }
 
@@ -531,33 +556,34 @@ footer .box_footer {
   width: 80%;
 }
 
-.player .player_bottom ul {
+
+.player .player_bottom .box_playerbottom {
   display: flex;
   align-items: center;
-}
-
-.player .player_bottom ul li {
-  padding: 0 10px;
   font-size: 12px;
 }
 
-
-.player .player_bottom ul li .musica_bar {
+.player .player_bottom .music {
   flex-grow: 1;
+  padding: 0 10px;
+}
+
+.player .player_bottom .music .musica_bar {
+  width: 100%;
   height: 4px;
   background-color: grey;
   border-radius: 20px;
 }
 
-.player .player_bottom ul li .musica_bar .color_musicabar {
-  width: 200px;
+.player .player_bottom .musica_bar .color_musicabar {
+  width: 20%;
   height: 4px;
   background-color: white;
   border-radius: 20px;
   position: relative;
 }
 
-.player .player_bottom ul li .musica_bar:hover .color_musicabar::after {
+.player .player_bottom .musica_bar:hover .color_musicabar::after {
   content: '';
   display: inline-block;
   width: 20px;
@@ -569,7 +595,7 @@ footer .box_footer {
   top: -200%;
 }
 
-.player .player_bottom ul li .musica_bar:hover .color_musicabar {
+.player .player_bottom .musica_bar:hover .color_musicabar {
   background-color: chartreuse;
 }
 
@@ -578,26 +604,43 @@ footer .box_footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 20px;
 }
 
-.volume ul {
+.volume .box_volume {
   display: flex;
 }
 
-.volume ul li {
+.volume .box_volume div {
   padding-right: 15px;
 }
 
-.volume ul li .volume_player {
-  width: 110px;
+.volume .box_volume .volume_player {
+  width: 120px;
   height: 4px;
   border-radius: 20px;
   background-color: grey;
 }
 
-.volume ul li .volume_player .color_volumeplayer {
+.volume .box_volume .volume_player .color_volumeplayer {
   width: 50px;
   height: 4px;
   border-radius: 20px;
   background-color: white;
+}
+
+@media screen and (max-width: 668px) {
+  .sinister {
+    width: 300px;
+    padding: 0;
+  }
+
+  .sinister .titolo {
+    padding-left: 5px;
+  }
+
+  .volume {
+    width: 600px;
+    padding-left: 20px;
+  }
 }
