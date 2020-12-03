@@ -475,7 +475,7 @@ footer .box_footer {
 }
 
 .sinister {
-  width: 250px;
+  width: 350px;
   padding: 0 0 0 10px;
   display: flex;
   align-items: center;
@@ -498,7 +498,6 @@ footer .box_footer {
 
 
 .iconcine {
-  width: 100px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -513,7 +512,6 @@ footer .box_footer {
 } 
 
 .player {
-  width: 100%;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -529,6 +527,10 @@ footer .box_footer {
   transform: scale(1.2);
 }
 
+.player .player_bottom {
+  width: 80%;
+}
+
 .player .player_bottom ul {
   display: flex;
   align-items: center;
@@ -541,7 +543,7 @@ footer .box_footer {
 
 
 .player .player_bottom ul li .musica_bar {
-  width: 600px;
+  flex-grow: 1;
   height: 4px;
   background-color: grey;
   border-radius: 20px;
