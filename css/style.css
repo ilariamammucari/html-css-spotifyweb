@@ -214,6 +214,7 @@ main {
 }
 
 
+
 #central_section {
   height: 100%;
   width: calc(100% - 250px);
@@ -228,7 +229,7 @@ main {
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+  z-index: 2;
 }
 
 #central_section .col_to_action a {
@@ -273,17 +274,17 @@ main {
 }
 
 
-
+#central_section .contenuto_centrale .lista_recenti {
+  margin-bottom: 60px;
+}
 
 #central_section .contenuto_centrale .lista_recenti ul {
   display: flex;
-  flex-wrap: wrap;
 }
 
 #central_section .contenuto_centrale .lista_recenti ul li {
   width: calc(100% / 6 - 15px);
   margin-right: 15px;
-  position: relative;
 }
 
 #central_section .contenuto_centrale .lista_recenti ul li img {
@@ -291,11 +292,9 @@ main {
 }
 
 #central_section .contenuto_centrale .titolo {
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   line-height: 1.6;
+  text-align: center;
 }
 
 #central_section .contenuto_centrale .titolo h3 {
@@ -305,6 +304,116 @@ main {
 #central_section .contenuto_centrale .titolo p {
   font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+  #central_section .contenuto_centrale .lista_recenti ul {
+    flex-wrap: wrap;
+  }
+
+  #central_section .contenuto_centrale .lista_recenti ul li {
+    width: calc(100% / 4 - 15px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav_action_sx {
+    width: 70px;
+  }
+
+  #central_section {
+    width: calc(100% - 70px);
+  }
+
+  #central_section .col_to_action {
+    width: calc(100% - 70px);
+  }
+
+  #central_section .col_to_action a {
+    font-size: 10px;
+  }
+  
+  #nav_action_sx .box_nav_top .logo {
+    background-image: url('../img/logo-small.svg');
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+  }
+
+
+  #nav_action_sx .box_nav_top .search_playlists span,
+  #nav_action_sx .customer_name .utente span,
+  #nav_action_sx .box_nav_top .playlists_name,
+  #nav_action_sx .customer_name .app span,
+  #nav_action_sx .box_nav_top .logo img {
+    display: none;
+  }
+
+  #nav_action_sx .box_nav_top .search_playlists img {
+    width: 50%;
+  }
+
+  #nav_action_sx .customer_name .app {
+    border: none;
+  }
+
+
+  #nav_action_sx .customer_name .app .fa-chevron-circle-down {
+    font-size: 25px;
+    padding-left: 3px;
+
+  }
+
+  #nav_action_sx .customer_name .utente img {
+    width: 90%;
+  }
+
+}
+
+
+
+
+#central_section .contenuto_centrale .creato_perme h2,
+#central_section .contenuto_centrale .artisti_popolari h2 {
+  margin-bottom: 2px;
+}
+
+#central_section .contenuto_centrale .creato_perme p,
+#central_section .contenuto_centrale .artisti_popolari p {
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+
+#central_section .contenuto_centrale .creato_perme ul,
+#central_section .contenuto_centrale .artisti_popolari ul {
+  display: flex;
+}
+
+#central_section .contenuto_centrale .creato_perme ul li,
+#central_section .contenuto_centrale .artisti_popolari ul li {
+  width: calc(100% / 6);
+  margin-right: 15px;
+}
+
+
+#central_section .contenuto_centrale .creato_perme ul li img,
+#central_section .contenuto_centrale .artisti_popolari ul li img {
+  width: 100%;
+}
+
+
+#central_section .contenuto_centrale .artisti_popolari ul li img {
+  border-radius: 50%;
+}
+
+#central_section .contenuto_centrale .titolo_perme,
+#central_section .contenuto_centrale .testo_popolari {
+  width: 100%;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
 /* footer */
 footer {
   width: 100%;
@@ -313,7 +422,7 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 footer .box_footer {
