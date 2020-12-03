@@ -165,8 +165,6 @@ main {
   color: white;
 }
 
-
-
 #nav_action_sx .playlists_name ul {
   padding-left: 20px;
   height: 80%;
@@ -183,7 +181,6 @@ main {
 #nav_action_sx .playlists_name a:hover {
   color: white;
 }
-
 
 #nav_action_sx .customer_name {
   height: 80px;
@@ -215,8 +212,6 @@ main {
   vertical-align: middle;
   margin-right: 5px;
 }
-
-
 
 #central_section {
   height: 100%;
@@ -541,6 +536,7 @@ footer .box_footer {
 
 .player .player_top .box_playertop {
   display: flex;
+  justify-content: center;
 }
 
 .player .player_top .box_playertop div {
@@ -560,6 +556,7 @@ footer .box_footer {
 .player .player_bottom .box_playerbottom {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 12px;
 }
 
@@ -642,5 +639,15 @@ footer .box_footer {
   .volume {
     width: 600px;
     padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sinister {
+    display: none;
+  }
+
+  .volume {
+    display: none;
   }
 }
